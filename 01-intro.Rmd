@@ -1,5 +1,63 @@
 # Introduction {#intro}
 
+## Workflow Github and Rstudio
+* install git
+* install R and Rstudio
+* creat a Github account
+
+* 1\. item 
+    * 1.1\. item
+    * 1.2\. item
+* 2\. item
+
+0. Setup git, github and Rstudio
+    1. check git executable path and creat rsa key, then copy it. (via Rstudio)
+    2. add this rsa key as SSH key to github account (via Github)
+    3. creat user globlas with git (via shell)
+1. creat git repisotory / project with Rstudio
+    1. new directory with git repository: `Test.Rproj` (via Rstudio)
+        1. creat an R script file and commit it: `test.R` (via Rstudio)
+        2. creat new github repo with readme: `test` (via Github)
+        3. push and merge the local and remote repos (via R-Shell)
+    
+        ```bash
+        git remote add origin https://github.com/kadiRgoceR/test.git
+
+        git config remote.origin.url git@github.com:kadiRgoceR/test.git
+    
+        git pull -u origin master
+    
+        git push -u origin master
+    
+        ```
+        4. commit, push and pull in Rstudio
+        
+        see for details[@harrison2015]
+  
+    2. existing directory
+        1. open shell and code
+            
+        ```bash
+        git init
+        ```
+        2. terminate R
+        
+        3. follow the notes from 1.1.2 to 1.1.4
+    
+    3. version control
+        1. fork an existing repo or creat a new one and copy the repo url (via Github)
+        2. new Project with version control, paste Github repo url (Rstudio)
+        3. make some changes, add a new R script, commit and push the changes to Github (Rstudio)
+        
+2. Branching
+        1. fork a repo 
+        2. do 3.2
+        3. tell git the upstream version
+        ```bash
+        `git remote add upstream https://github.com/rstudio/bookdown-demo`
+        ```
+        
+
 You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
 
 Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
